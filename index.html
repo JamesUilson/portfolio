@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Portfolio | Interactive 3D Experience</title>
+  <meta name="description" content="Innovative portfolio featuring cutting-edge 3D WebGL animations and kinetic transitions">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+      <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Mobile Fallback -->
+  <div class="mobile-fallback"></div>
+  <div class="gradient-bg"></div>
+  <div id="webgl-container"></div>
+
+  <div class="bg-gradient-animation"></div>
+
+  <div class="dust-bg">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <!-- 20-30 ta span qo‘shish -->
+</div>
+
+<canvas id="dust-canvas"></canvas>
+
+<div class="cursor-halo" id="cursorHalo"></div>
+
+
+  <!-- Navigation -->
+  <nav class="nav-3d">
+      <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+  </nav>
+
+  <!-- Sections -->
+    <!-- Home -->
+    <section id="home" class="section active">
+      <div class="hero-content">
+          <h1 class="welcome-text">BaxaTech</h1>
+          <p class="subtitle">Professional Computer Services</p>
+        <div class="mt-12">
+          <a href="assets/myCV.pdf" download
+            class="bg-gradient-to-r from-neon-blue to-electric-teal text-dark-bg px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-neon-blue/30">
+            Download CV
+          </a>
+        </div>
+
+      </div>
+      <div class="scroll-indicator">
+          <span>↓ Scroll to explore ↓</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2 class="text-4xl font-orbitron font-bold mb-16 text-center text-neon-blue">FEATURED PROJECTS</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://typo3.org/fileadmin/_processed_/2/b/csm_markdown-typo3-illustration_464e5d5e39.jpg" alt="3D Project" loading="lazy" />
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Markdown Machine</h3>
+                <p class="text-gray-300 mb-4">Easy visualization with real-time markdowning.</p>
+                <a href="https://jamesuilson.github.io/markdown/" target="_blank" rel="noopener noreferrer">
+                  <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+                    View Project
+                  </button>
+              </a>
+            </div>
+             <!-- Darmon -->
+    <div class="project-card">
+  <div class="project-image">
+    <img src="assets/darmon.png" alt="Darmon Project" loading="lazy" />
+  </div>
+  <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Darmon</h3>
+  <p class="text-gray-300 mb-4">
+    Innovative software developed for pharmacies: drug inventory, orders, and online purchasing system.  </p>
+  <a href="https://github.com/JamesUilson/Darmon.git" target="_blank" rel="noopener noreferrer">
+    <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+      View Project
+    </button>
+  </a>
+</div>
+    <!-- Food Delivery Backend -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://i.pinimg.com/736x/61/58/ed/6158ed8801d8b76eab78de13b8b4dad7.jpg" alt="Food Delivery Backend" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Food Delivery Backend</h3>
+      <p class="text-gray-300 mb-4">
+        Backend based on Django REST Framework: user registration, order management, payment integration, and GPS tracking.      </p>
+      <a href="https://github.com/JamesUilson/restoran-backend.git" target="_blank" rel="noopener noreferrer">
+    <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+      View Project
+    </button>
+  </a>
+    </div>
+
+    <!-- Fitness Trainer App -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://img.freepik.com/premium-vector/fitness-workout-unique-neomorphic-kit-personal-trainer-app-with-activity-analytics-strength-cardio-training-sport-activity-ui-ux-template-set-gui-responsive-mobile-application_9209-3406.jpg?w=360" alt="Fitness Trainer App" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Fitness Trainer App</h3>
+      <p class="text-gray-300 mb-4">
+        A mobile app that provides online workouts, a meal plan, and a personal trainer.      
+      </p>
+     <a href="https://github.com/doki44/fitnessTrener.git" target="_blank" rel="noopener noreferrer">
+    <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+      View Project
+    </button>
+    </a>
+    </div>
+
+    <!-- Dunyo soati -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://www.timeanddate.com/scripts/worldclock_og.php?h1=World%20Clock&h2=Local%20Time%20Around%20the%20World" alt="Random Quote" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">World clock</h3>
+      <p class="text-gray-300 mb-4">
+        World Clocks is a site that provides information about time zones.      
+      </p>
+    <a href="https://github.com/JamesUilson/clock.git" target="_blank" rel="noopener noreferrer">
+        <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+          View Project
+        </button>
+    </a>
+    </div>
+
+        <!-- drum -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgg602x5ffiky4xxmt9q5.jpeg" alt="Telegram Bots" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Random random-quote-machine</h3>
+      <p class="text-gray-300 mb-4">
+        A motivational web app that randomly generates quotes from Twitter      
+      </p>
+     <a href="https://jamesuilson.github.io/random-quote-machine/" target="_blank" rel="noopener noreferrer">
+    <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+      View Project
+    </button>
+  </a>
+    </div>
+     
+            <!-- Quote machine -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://www.virtualdrumming.com/drums/drum-lessons-images/virtual-drums-online-games.jpg" alt="Telegram Bots" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Drum</h3>
+      <p class="text-gray-300 mb-4">
+        An interactive web application that allows you to play drums using the keyboard.      
+      </p>
+
+     <a href="https://jamesuilson.github.io/drum/" target="_blank" rel="noopener noreferrer">
+    <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+      View Project
+    </button>
+  </a>
+    </div>
+
+    <!-- Open Budget -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://zamin.uz/uploads/posts/2025-08/a8007c9439_cobalt.webp" alt="Telegram Bots" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Open Budget</h3>
+      <p class="text-gray-300 mb-4">
+        Personalized voting software via Open Budget Bot. I have created 10 similar open budget bots like this.      
+      </p>
+    <a href="https://t.me/OpenBudget025Bot" target="_blank" rel="noopener noreferrer">
+    <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+      View Project
+    </button>
+  </a>
+    </div>
+      <!-- Telegram Bots -->
+
+      <div class="project-card">
+      <div class="project-image">
+        <img src="https://scontent.ftas1-2.fna.fbcdn.net/v/t39.30808-6/471161799_1129863008722909_108415490387306966_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lzNP6tYxoQ0Q7kNvwHIXm2O&_nc_oc=AdnoKjR4RfbiRvF6TDFK6677sxWVIgYL_FeIx7LUFS9Nu4Dxf51jn8UPW3csr9tuJXE&_nc_zt=23&_nc_ht=scontent.ftas1-2.fna&_nc_gid=dhUf3mHs7c6karrQ-xGbBA&oh=00_AfXkhfKzFzynL_iyFv5DjcXvn2aR1h5U5xrW-0mwm6gHqg&oe=68B4D555" alt="Telegram Bots" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Restoran topuvchi</h3>
+      <p class="text-gray-300 mb-4">
+        A bot that finds nearby restaurants.      
+      </p>
+      <a href="https://t.me/qaynoq_bot" target="_blank" rel="noopener noreferrer">
+          <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+            View Project
+          </button>
+        </a>
+    </div>
+
+    <!-- To`lov xisob kitob -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://finlit.uz/upload/iblock/bf9/virtual_card.jpg" alt="To`lov web" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">To`lov tekshiruv sayti</h3>
+      <p class="text-gray-300 mb-4">
+        A website designed to check and manage payments.      
+      </p>
+      <a href="https://tolov-6345f.web.app" target="_blank" rel="noopener noreferrer">
+          <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+            View Project
+          </button>
+      </a>
+    </div>
+
+        <!-- Dizayn -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/getty_537311951_100178.jpg" alt="Graphic Design" loading="lazy" />
+      </div>
+      <h3 class="text-2xl font-semibold mb-3 text-electric-teal">Graphic Design Works</h3>
+      <p class="text-gray-300 mb-4">
+        100+ professional designs: logos, banners, business cards, advertising posts and other graphic designs. All on my Instagram page.      
+      </p>
+      <a href="https://www.instagram.com/baxa_tech_/" target="_blank" rel="noopener noreferrer">
+          <button class="mt-auto border border-neon-blue text-neon-blue px-6 py-2 rounded-full hover:bg-neon-blue hover:text-dark-bg transition-colors">
+            View Project
+          </button>
+      </a>
+    </div>
+        </div>
+    </section>
+
+  
+
+<section id="certificates" class="section">
+  <h2 class="text-4xl font-orbitron font-bold mb-16 text-center text-neon-blue">CERTIFICATES</h2>
+  <div class="certificates-carousel">
+
+    <div class="carousel-row row1">
+      <div class="certificate-card">
+        <img src="assets/cert1.png" alt="">
+        <h4>CJCA</h4>
+        <p>Hack the box</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cert2.png" alt="">
+        <h4>CBBH</h4>
+        <p>Hack the box</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cert3.png" alt="">
+        <h4>CPTS</h4>
+        <p>Hack the box</p>
+      </div>
+    </div>
+
+    <div class="carousel-row row2">
+      <div class="certificate-card">
+        <img src="assets/cert4.png" alt="">
+        <h4>Responsive Web Designer</h4>
+        <p>CodeCampTeam</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cert5.png" alt="">
+        <h4>Front End Developer</h4>
+        <p>CodeCampTeam</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cert6.png" alt="">
+        <h4>Python Intermediate</h4>
+        <p>SoloLearn · 2025</p>
+      </div>
+    </div>
+
+    <div class="carousel-row row3">
+      <div class="certificate-card">
+        <img src="assets/cert7.png" alt="">
+        <h4>Mobile Ux design</h4>
+        <p>IxDF 2024</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cert8.png" alt="">
+        <h4>Canva for work </h4>
+        <p>Canva</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cert9.png" alt="">
+        <h4>Marketing on canva</h4>
+        <p>Canva</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="about" class="section">
+  <div class="about-container">
+    <!-- Left: Profile Picture -->
+    <div class="profile-card">
+      <img src="assets/profile.jpeg" alt="Baxtiyorjon Bahodirov" />
+      <div class="glow-ring"></div>
+    </div>
+
+    <!-- Right: Info Card -->
+    <div class="info-card">
+      <h2 class="name">Baxtiyorjon Bahodirov</h2>
+      <p><strong>Born:</strong> 19th September, 2006</p>
+      <p><strong>Fields:</strong> Software Development, UI/UX Design, Pentesting (Ethical Hacking)</p>
+      <p><strong>Experience:</strong> Over 2 years in IT and Security Projects</p>
+      <p><strong>Skills:</strong> Flutter, Django, React, Python, Cybersecurity, UI/UX Design</p>
+      <p><strong>Interests:</strong> Web & Mobile Development, Ethical Hacking, Creative UI Animations</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <!-- Chap taraf: karta -->
+    <div class="contact-card">
+      <h2 class="title"><strong>Let's Connect!</strong> </h2>
+      <p>Feel free to reach out via Email, GitHub, LinkedIn, Telegram, or Instagram. I'm always open to collaboration and projects!</p>
+    </div>
+</section>
+    <!-- O'ng taraf: kub -->
+    <div class="contact-cube-container">
+      <div class="contact-cube">
+        <div class="contact-cube-face face-front">
+          <a href="mailto:baxatech2025@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Email</a>
+        </div>
+        <div class="contact-cube-face face-back">
+          <a href="https://github.com/JamesUilson" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+        </div>
+        <div class="contact-cube-face face-right">
+          <a href="https://www.linkedin.com/in/baxtiyorjon-bahodirov-864486375/" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <div class="contact-cube-face face-left">
+          <a href="https://t.me/BaxaTech25" target="_blank"><i class="fa fa-telegram"></i> Telegram</a>
+        </div>
+        <div class="contact-cube-face face-top">
+          <a href="https://instagram.com/baxa_tech_/" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
+        </div>
+        <div class="contact-cube-face face-bottom">
+          <span>Let's Connect!</span>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
