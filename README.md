@@ -1,5 +1,4 @@
-Tushunarli ✅. Sizga GitHub uchun rasmiy, toza va mukammal README kerak. Unda hech qanday til aralashmasi, ortiqcha gap bo‘lmaydi, professional shaklda yoziladi. Mana to‘liq qayta ishlangan variant:
-# 🚀 Portfolio
+# 🚀 Portfolio by BaxaTech
 
 **Ignite Your Presence with Stunning Digital Impact**
 
@@ -70,3 +69,4 @@ Testing
 💡 Conclusion
 Portfolio is crafted to deliver a stunning digital presence with interactivity, performance, and flexibility.
 Use it as a foundation, customize it to your style, and bring your ideas to life.
+
